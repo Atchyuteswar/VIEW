@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+
+    *{  
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+  body{
+      background: rgb(0, 0, 0);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 57%, rgba(0,212,255,1) 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow: hidden;
+      background-blend-mode:multiply;
+      background-color: rgba(0, 0, 0, 0.495);
+    }
+
+  .wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 110vh;
+      background: rgba(39, 39, 39, 0.4);
+  }
+  .nav{
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+      z-index: 100;
+  }
+  .nav-logo p{
+    color: white;
+    font-size: 30px;
+    font-weight: 750;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .nav-menu ul{
+      display: flex;
+  }
+  .nav-menu ul li{
+      list-style-type: none;
+  }
+  .nav-menu ul li .link{
+      text-decoration: none;
+      font-weight: 500;
+      color: #fff;
+      padding-bottom: 15px;
+      margin: 0 25px;
+  }
+  .link:hover, .active{
+      border-bottom: 2px solid #fff;
+  }
+  .nav-button .btn{
+      width: 130px;
+      height: 40px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s ease;
+  }
+  .btn:hover{
+      background: rgba(255, 255, 255, 0.3);
+  }
+  #registerBtn{
+      margin-left: 15px;
+  }
+  .btn.white-btn{
+      background: rgba(255, 255, 255, 0.7);
+  }
+  .btn.btn.white-btn:hover{
+      background: rgba(255, 255, 255, 0.5);
+  }
+  .nav-menu-btn{
+      display: none;
+  }
+
+  .headings {
+    font-size: 80px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  .subheadings {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .para { 
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+    margin: 35px 35px;
+    text-align: center;
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #loan-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #payment-result {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  </style>
+
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>VIEW</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="homepage.html" class="link active">Home</a></li>
+                <li><a href="about.html" class="link">About Us</a></li>
+                <li><a href="terms.html" class="link">Privacy Policy & Terms</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+          <a href="login.html">
+            <button class="btn white-btn" id="loginBtn">Sign In</button>
+            <button class="btn" id="registerBtn">Sign Up</button>
+          </a>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <h1 style="color: white ;">Loan Application</h1><br>
+  <form id="loan-form">
+    <div class="form-group" style="color:white;">
+      <label for="loan-amount">Loan Amount:</label>
+      <input type="number" id="loan-amount" name="loanAmount" min="1000" required>
+    </div>
+    <div class="form-group" style="color: white;">
+      <label for="interest-rate">Interest Rate (%):</label>
+      <input type="number" id="interest-rate" name="interestRate" min="0.01" step="0.01" required>
+    </div>
+    <div class="form-group" style="color: white;">
+      <label for="loan-term">Loan Term (Years):</label>
+      <select id="loan-term" name="loanTerm" required>
+        <option value="1">1 Year</option>
+        <option value="2">2 Years</option>
+        <option value="3">3 Years</option>
+        <option value="4">4 Years</option>
+        <option value="5">5 Years</option>
+      </select>
+    </div>
+    <button type="button" onclick="calculatePayment()" style="color: white;">Calculate Payment</button>
+    <p style="color: white;" id="payment-result"></p>
+  </form>
+
+  <script>
+
+    function calculatePayment() {
+      const loanAmount = document.getElementById('loan-amount').value;
+      const interestRate = document.getElementById('interest-rate').value / 100; // Convert percentage to decimal
+      const loanTerm = document.getElementById('loan-term').value;
+    
+      // Calculate monthly interest rate
+      const monthlyInterestRate = interestRate / 12;
+    
+      // Calculate loan term in months
+      const totalMonths = loanTerm * 12;
+    
+      // Calculate monthly payment (formula for EMI)
+      const monthlyPayment = loanAmount * (monthlyInterestRate * Math.pow(1 + monthlyInterestRate, totalMonths)) / (Math.pow(1 + monthlyInterestRate, totalMonths) - 1);
+    
+      // Display formatted monthly payment
+      const formattedPayment = monthlyPayment.toFixed(2);
+      document.getElementById('payment-result').textContent = `Estimated Monthly Payment: $${formattedPayment}`;
+    }
+
+  </script>
+  
+</body>
+</html>

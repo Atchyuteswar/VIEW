@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <style>
+
+    *{  
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+  body{
+      background: rgb(0, 0, 0);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 57%, rgba(0,212,255,1) 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      overflow: hidden;
+      display: grid;
+      background-blend-mode:multiply;
+      background-color: rgba(0, 0, 0, 0.495);
+    }
+
+  .wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 110vh;
+      background: rgba(39, 39, 39, 0.4);
+  }
+  .nav{
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+      z-index: 100;
+  }
+  .nav-logo p{
+    color: white;
+    font-size: 30px;
+    font-weight: 750;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .nav-menu ul{
+      display: flex;
+  }
+  .nav-menu ul li{
+      list-style-type: none;
+  }
+  .nav-menu ul li .link{
+      text-decoration: none;
+      font-weight: 500;
+      color: #fff;
+      padding-bottom: 15px;
+      margin: 0 25px;
+  }
+  .link:hover, .active{
+      border-bottom: 2px solid #fff;
+  }
+  .nav-button .btn{
+      width: 130px;
+      height: 40px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s ease;
+  }
+  .btn:hover{
+      background: rgba(255, 255, 255, 0.3);
+  }
+  #registerBtn{
+      margin-left: 15px;
+  }
+  .btn.white-btn{
+      background: rgba(255, 255, 255, 0.7);
+  }
+  .btn.btn.white-btn:hover{
+      background: rgba(255, 255, 255, 0.5);
+  }
+  .nav-menu-btn{
+      display: none;
+  }
+
+  .headings {
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 55px;
+    text-align: center;
+  }
+
+  .subheadings {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .para { 
+    font-size: 25px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+    margin: 35px 35px;
+    text-align: center;
+  }
+
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #contact-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    height: 150px;
+  }
+  
+  button {
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  #contact-info {
+    margin-top: 40px;
+  }
+  
+  #contact-info p {
+    margin-bottom: 10px;
+  }
+  
+  body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #loan-form {
+    display: flex bg-success;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    color: #fff;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input, select, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  textarea {
+    resize: vertical; /* Allow users to resize the textarea */
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #form-message {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  
+  h1 {
+    color: white;
+  }
+  
+
+  </style>
+
+  <div class="wrapper" >
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>VIEW</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="homepage.html" class="link">Home</a></li>
+                <li><a href="about.html" class="link">About</a></li>
+                <li><a href="terms.html" class="link">Privacy Policy & Terms</a></li>
+            </ul>
+        </div>
+
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <h1>Debt Consolidation Loan Application</h1>
+    <form id="loan-form">
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+      </div>
+      <div class="form-group">
+        <label for="total-debt">Total Debt Amount:</label>
+        <input type="number" id="total-debt" name="totalDebt" min="1000" required>
+      </div>
+      <div class="form-group">
+        <label for="debt-breakdown">Debt Breakdown (Optional):</label>
+        <textarea id="debt-breakdown" name="debtBreakdown" rows="5" placeholder="List your debts (creditor name, amount)"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="desired-loan-amount">Desired Loan Amount:</label>
+        <input type="number" id="desired-loan-amount" name="desiredLoanAmount" min="1000" required>
+      </div>
+      <button type="submit">Submit Application</button>
+    </form>
+  
+    <p id="form-message"></p>
+  
+    <script>
+      const form = document.getElementById('loan-form');
+const formMessage = document.getElementById('form-message');
+
+form.addEventListener('submit', function(event))
+ {
+  event.preventDefault(); // Prevent default form submission
+
+  const name = document.getElementById('name').value;
+  const totalDebt = document.getElementById('total-debt').value;
+  const desiredLoanAmount = document.getElementById('desired-loan-amount').value;
+
+  // Basic validation (can be extended)
+  let errorMessage = "";
+  if (name.trim() === "") {
+    errorMessage = "Please enter your full name.";
+  } else if (totalDebt < desiredLoanAmount) {
+    errorMessage = "Desired loan amount cannot be greater than total debt.";
+  } else if (totalDebt <= 0 || desiredLoanAmount <= 0) {
+    errorMessage = "Please enter valid amounts for total debt and desired loan amount.";
+  }
+
+  if (errorMessage) {
+    formMessage.textContent = errorMessage;
+    return; // Prevent form submission if errors exist
+  }
+ }
+  // Form submission logic
+
+    </script>
+  </body>
+  </html

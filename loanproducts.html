@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>About | VIEW</title>
+    <link rel="icon" href="webimg.png" type="image/png">
+</head>
+<body>
+  <style>
+
+    *{  
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  body{
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 57%, rgba(0,212,255,1) 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      background-position: center;
+      font-family: 'poppins', sans-serif;
+      background-blend-mode:multiply;
+      background-color: rgba(0, 0, 0, 0.495);
+      scroll-behavior: none;
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .wrapper{
+      display: contents;
+      justify-content: center;
+      align-items: center;
+      min-height: 110vh;
+      background: rgba(39, 39, 39, 0.4);
+  }
+  .nav{
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+      z-index: 100;
+      transition: all 500ms ease;
+  }
+
+  .nav.scrolling {
+      background: rgb(0, 0, 0);
+      padding: 0;
+  } 
+
+  .nav.scrolling ul li a {
+      color: #eee;
+  }
+
+  .nav-logo p{
+    color: white;
+    font-size: 30px;
+    font-weight: 750;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .nav-menu ul{
+      display: flex;
+  }
+  .nav-menu ul li{
+      list-style-type: none;
+  }
+  .nav-menu ul li .link{
+      text-decoration: none;
+      font-weight: 500;
+      color: #fff;
+      padding-bottom: 15px;
+      margin: 0 25px;
+  }
+  .link:hover, .active{
+      border-bottom: 2px solid #fff;
+  }
+  .nav-button .btn{
+      width: 130px;
+      height: 40px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s ease;
+  }
+  .btn:hover{
+      background: rgba(255, 255, 255, 0.3);
+  }
+  #registerBtn{
+      margin-left: 15px;
+  }
+  .btn.white-btn{
+      background: rgba(255, 255, 255, 0.7);
+  }
+  .btn.btn.white-btn:hover{
+      background: rgba(255, 255, 255, 0.5);
+  }
+  .nav-menu-btn{
+      display: none;
+  }
+
+  .content {
+    margin: 45px 45px;
+  }
+
+  .headings {
+    font-size: 40px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-decoration: underline 2px;
+    margin-top: 120px;
+    text-align: center;
+    margin-top: 150px;
+  }
+
+  .headings1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-decoration: underline 2px;
+  }
+
+  .subheadings {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .para { 
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .span {
+    font-weight: 500;
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15%; /* Add negative margins to cancel out padding */
+    padding: 0 15%; /* Add padding for spacing between cards */
+  }
+  
+  .card {
+    width: calc(25% - 30px); /* Adjust width based on number of cards per row */
+    margin: 10px 15px; /* Add margin for spacing between cards */
+    border: 1px solid #eee; /* Add a basic border (optional) */
+  }
+  
+  /* Optional styles for card content */
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-title {
+    margin-bottom: 10px;
+  }
+  
+  .rty {
+    padding: 70px;
+    padding-left: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .l {
+    text-decoration: none;
+  }
+
+</style>
+
+ <div class="wrapper" >
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>VIEW</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="homepage.html" class="link active">Home</a></li>
+                <li><a href="about.html" class="link">About Us</a></li>
+                <li><a href="terms.html" class="link">Privacy Policy & Terms</a></li>
+            </ul>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+
+    <div data-role="tile">
+      <span class="badge-top">10</span>
+    </div>
+    <div data-role="tile">
+      <span class="badge-bottom">10</span>
+    </div>
+
+<div class="rty">
+<div class="ugh">
+<div class="cards">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Security and Privacy: </h5>
+        <p class="card-text">Loan banks prioritize data security and privacy to protect borrowers' sensitive information throughout the loan application and servicing process.</p>
+        <a href="terms.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem; ">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Personal Loans for Emergency Expenses:</h5>
+        <p class="card-text">Individuals can use the loan website to apply for personal loans to cover unexpected expenses such as medical bills, car repairs, or home maintenance.</p>
+        <a href="epla.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Small Business Loans for Startups:</h5>
+        <p class="card-text">Entrepreneurs and small business owners can access funding through the loan website to launch or grow their ventures.</p>
+        <a href="sbla.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Home Improvement Loans:</h5>
+        <p class="card-text">Homeowners seeking to renovate or upgrade their properties can utilize the loan website to secure home improvement loans.</p>
+        <a href="hil.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="cards">
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Student Loans for Higher Education:</h5>
+        <p class="card-text">Students pursuing higher education can explore student loan options on the website to cover tuition fees, living expenses, and other educational costs.</p>
+        <a href="slhe.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Debt Consolidation Loans:</h5>
+        <p class="card-text">Individuals looking to manage multiple debts can consolidate them into a single loan through the website, simplifying repayment and potentially lowering interest rates.</p>
+        <a href="dcl.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Auto Loans for Vehicle Purchase:</h5>
+        <p class="card-text">Consumers seeking to purchase a car or other vehicles can use the loan website to secure auto loans with favorable terms.</p>
+        <a href="alvp.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title" style=" font-weight:600;">Customer Support: </h5>
+        <p class="card-text">Reliable customer support is essential for addressing borrower inquiries, providing assistance during the application process, and resolving issues related to loan servicing.</p>
+        <a href="contactus.html" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
+    const stickyNavbar = document.querySelector(".nav");
+
+    document.addEventListener("scroll", () => {
+
+        if (window.scrollY > 36) {
+            stickyNavbar.classList.add("scrolling");
+        } else {
+            stickyNavbar.classList.remove("scrolling");
+        }
+
+    })
+</script>
+</body>
+</html>

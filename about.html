@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>About | VIEW</title>
+    <link rel="icon" href="webimg.png" type="image/png">
+</head>
+<body>
+  <style>
+
+    *{  
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+  }
+
+  body{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 57%, rgba(0,212,255,1) 100%);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 0;
+      background-position: center;
+      font-family: 'poppins', sans-serif;
+      background-blend-mode:multiply;
+      background-color: rgba(0, 0, 0, 0.495);
+  }
+
+  #myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  .wrapper{
+      display: contents;
+      justify-content: center;
+      align-items: center;
+      min-height: 110vh;
+      background: rgba(39, 39, 39, 0.4);
+  }
+  .nav{
+      position: fixed;
+      top: 0;
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      height: 100px;
+      line-height: 100px;
+      background: linear-gradient(rgba(39,39,39, 0.6), transparent);
+      z-index: 100;
+      transition: all 500ms ease;
+  }
+
+  .nav.scrolling {
+      background: rgb(0, 0, 0);
+      padding: 0;
+  } 
+
+  .nav.scrolling ul li a {
+      color: #eee;
+  }
+
+  .nav-logo p{
+    color: white;
+    font-size: 30px;
+    font-weight: 750;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  .nav-menu ul{
+      display: flex;
+  }
+  .nav-menu ul li{
+      list-style-type: none;
+  }
+  .nav-menu ul li .link{
+      text-decoration: none;
+      font-weight: 500;
+      color: #fff;
+      padding-bottom: 15px;
+      margin: 0 25px;
+  }
+  .link:hover, .active{
+      border-bottom: 2px solid #fff;
+  }
+  .nav-button .btn{
+      width: 130px;
+      height: 40px;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.4);
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: .3s ease;
+  }
+  .btn:hover{
+      background: rgba(255, 255, 255, 0.3);
+  }
+  #registerBtn{
+      margin-left: 15px;
+  }
+  .btn.white-btn{
+      background: rgba(255, 255, 255, 0.7);
+  }
+  .btn.btn.white-btn:hover{
+      background: rgba(255, 255, 255, 0.5);
+  }
+  .nav-menu-btn{
+      display: none;
+  }
+
+  .content {
+    margin: 45px 45px;
+  }
+
+  .headings {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-decoration: underline 2px;
+    margin-top: 120px;
+    text-align: center;
+    margin-top: 150px;
+  }
+
+  .headings1 {
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+    text-decoration: underline 2px;
+  }
+
+  .subheadings {
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .para { 
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+
+  .span {
+    font-weight: 500;
+  }
+
+  </style>
+
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>VIEW</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="homepage.html" class="link">Home</a></li>
+                <li><a href="about.html" class="link active">About Us</a></li>
+                <li><a href="terms.html" class="link">Privacy Policy & Terms</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <a href="login.html">
+              <button class="btn white-btn" id="loginBtn">Sign In</button>
+              <button class="btn" id="registerBtn">Sign Up</button>
+            </a>
+          </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+    
+    <div class="content">
+        <h2 class="headings">
+            About our project
+        </h2>
+        <p class="para">
+            Welcome to VIEW, where we are dedicated to simplifying the borrowing experience for everyone. Our mission is to provide accessible and transparent loan solutions that empower individuals to achieve their financial goals responsibly.
+        </p>
+        <p class="para">
+            At VIEW, we understand that navigating the world of loans can be daunting. That's why we've created a platform that prioritizes clarity, fairness, and convenience. Whether you're looking for a personal loan to cover unexpected expenses or seeking financing for a significant investment, we're here to help.
+        </p>
+        <p class="para">
+            Our vision is to foster a community where borrowers can make well-informed financial decisions with confidence. We strive to achieve this vision by offering:
+        </p>
+        <p class="para">
+            &bull;&nbsp;<span class="span">Transparency:</span> We believe in clear and honest communication. You'll find straightforward information about our loan products, terms, and rates, ensuring you understand what you're signing up for.
+        </p>
+        <p class="para">
+            &bull;&nbsp;<span class="span">Accessibility:</span> We aim to make the borrowing process accessible to everyone, regardless of their financial background. Our application process is designed to be user-friendly, with support available every step of the way.
+        </p>
+        <p class="para">
+            &bull;&nbsp;<span class="span">Responsibility:</span> We promote responsible borrowing practices. Our team is committed to guiding borrowers towards options that suit their needs and financial circumstances.
+        </p>
+        <p class="para">
+            Whether you're a first-time borrower or experienced in managing loans, VIEW is committed to being your trusted partner on your financial journey. Our goal is not just to provide loans but to empower individuals to take control of their finances and achieve their aspirations.
+        </p>
+        <p class="para">
+            Join us at VIEW and experience a new approach to borrowing—one that's built on integrity, understanding, and a genuine desire to see our users succeed.
+        </p>
+    </div>
+
+
+    <script>
+        const stickyNavbar = document.querySelector(".nav");
+
+        document.addEventListener("scroll", () => {
+
+            if (window.scrollY > 36) {
+                stickyNavbar.classList.add("scrolling");
+            } else {
+                stickyNavbar.classList.remove("scrolling");
+            }
+
+        })
+    </script>
+</body>
+</html>
